@@ -74,8 +74,8 @@
                     <thead>
                     <tr>
                       <th>No</th>
+                      <th>Foto</th>
                       <th>Nama</th>
-                      <th>Jumlah</th>
                       <th>Tanggal</th>
                       <th>Jam</th>
                       <th>Dari</th>
@@ -91,8 +91,16 @@
                       @foreach ($data as $dt)
                         <tr>
                         <td>{{$no++}}</td>
+                        <td class="text-center">
+                          @if($dt->namafoto == null)
+                            Tidak Ada
+                          @else
+                          <a href={{url("/storage/{$dt->namafoto}")}} target="_blank">
+                            <img src={{url("/storage/{$dt->namafoto}")}} width='50px'>
+                          </a>
+                          @endif
+                        </td>
                         <td>{{$dt->nama_tamu}}</td>
-                        <td>{{$dt->jumlah_tamu}}</td>
                         <td>{{Carbon\Carbon::parse($dt->tanggal)->format('d-M-Y')}}</td>
                         <td>{{$dt->jam}}</td>
                         <td>{{$dt->instansi}}</td>
