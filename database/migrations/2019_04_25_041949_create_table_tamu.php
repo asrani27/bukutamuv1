@@ -22,8 +22,7 @@ class CreateTableTamu extends Migration
             $table->string('instansi');
             $table->string('telp',15);
             $table->text('keperluan');
-            // $table->integer('status_id')->unsigned();
-            // $table->text('tanggapan')->nullable();
+            $table->text('namafoto')->nullable();
             $table->timestamps();
         });
     }
