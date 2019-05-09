@@ -1,8 +1,5 @@
-<html><head>
-        <link rel="stylesheet" type="text/css" href="{{url('LTE/stylepdf.css')}}">
-</head><body>
-
-        <h2 class="text-center"><b class="text-primary">Buku Tamu Pemko Banjarmasin</b></h2>   
+<html><head><style>table {border-collapse: collapse;width: 100%;} th, td {text-align: left; padding: 8px;} tr:nth-child(even){background-color: #f2f2f2} th {background-color: #4CAF50;color: white;}</style></head><body>
+<h2 class="text-center"><b class="text-primary">Buku Tamu Pemko Banjarmasin</b></h2>
 <h4>Report PDF Buku Tamu : {{$bulanIni}}</h4>
         <table class="table1" >
             <tr>

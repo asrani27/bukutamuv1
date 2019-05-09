@@ -36,7 +36,10 @@ class FrontController extends Controller
         $s->instansi    = $req->instansi;
         $s->telp        = $req->telp;
         $s->keperluan   = $req->keperluan;
-        $s->namafoto    = $namafoto;
+        if(!is_null($req->namafoto))
+        {
+            $s->namafoto    = $namafoto;
+        }
         $s->save();
         
         Alert::success('Berhasil Dikirim', 'Terima Kasih');

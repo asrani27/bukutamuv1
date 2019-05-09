@@ -45,3 +45,6 @@ Route::get('/pdf/agendaToday', 'PdfController@agendaToday')->name('agendaToday')
 Route::get('/pdf/agendaMonth', 'PdfController@agendaMonth')->name('agendaMonth');
 Route::get('/pdf/report', 'PdfController@pdf')->name('pdf');
 Route::post('/pdf/report/print', 'PdfController@printpdf')->name('printpdf');
+
+Route::get('/pdf', 'PdfController@index');
+Route::get('/pdf/test', 'PdfController@test')->name('test');

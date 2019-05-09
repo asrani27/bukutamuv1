@@ -1,11 +1,8 @@
-<html><head>
-        <link rel="stylesheet" type="text/css" href="{{url('LTE/stylepdf.css')}}">
-</head><body>
-
-        <h2 class="text-center"><b class="text-primary">Buku Tamu Pemko Banjarmasin</b></h2>   
-        <h4>Report PDF Buku Tamu : Total Semua Agenda</h4>
-        <table class="table1" >
-            <tr>
+<html><head><style>table {border-collapse: collapse;width: 100%;} th, td {text-align: left; padding: 8px;} tr:nth-child(even){background-color: #f2f2f2} th {background-color: #4CAF50;color: white;}</style></head><body>
+<h2 class="text-center"><b class="text-primary">Buku Tamu Pemko Banjarmasin</b></h2>
+<h4>Report PDF Buku Tamu : Total Semua Agenda</h4>
+<table class="table1" >
+        <tr>
                 <th>No</th>
                 <th>Nama</th>
                 <th>Jumlah</th>
@@ -14,7 +11,7 @@
                 <th>Dari</th>
                 <th>Keperluan</th>
                 <th>Telp</th>
-            </tr>
+        </tr>
             <?php
                     $no = 1;
                     ?>
@@ -30,5 +27,4 @@
                         <td>{{$dt->telp}}</td>
                         </tr>
                       @endforeach
-        </table>	
-</body></html>
+</table></body></html>

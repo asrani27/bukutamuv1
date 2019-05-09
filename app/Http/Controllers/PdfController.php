@@ -14,8 +14,14 @@ class PdfController extends Controller
         $this->middleware('auth');
     }
 
+    public function index()
+    {
+        return view('pdf.index');
+    }
+
     public function agendaAll()
     {
+
         $now = Carbon::now()->format('Y-m-d-h-i-s');
         $data = Agenda::orderBy('id','desc')->get();
         $pdf = PDF::loadView('pdf.totalAgenda', compact('data'))->setPaper('f4', 'landscape');
@@ -68,8 +74,15 @@ class PdfController extends Controller
     
         $no   = rand(0,10000);
         $tgl  = Carbon::now()->format('d M Y');
-        $data = Agenda::whereBetween('created_at', array($extglmulai, $extglakhir))->get();
+        $data = Agenda::whereBetween('created_at', array($extglmulai." 00:00:00", $extglakhir." 23:59:59"))->get();
         $pdf  = PDF::loadView('pdf.pdfperiode', compact('data','tglmulai','tglakhir'))->setPaper('f4', 'landscape');
         return $pdf->download($no.'pdfreport'.date("Y-m-D-H:m:s").'.pdf');
     }   
+
+    public function test()
+    {
+        $no   = rand(0,10000);
+        $pdf  = PDF::loadView('pdf.test')->setPaper('f4', 'landscape');
+        return $pdf->download($no.'pdfreport.pdf');
+    }
 }
