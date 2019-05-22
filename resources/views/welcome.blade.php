@@ -1,7 +1,6 @@
 @extends('layouts.front.master')
 
 @push('add_css')
-
   <!-- daterange picker -->
   <link rel="stylesheet" href="{{url('LTE/bower_components/bootstrap-daterangepicker/daterangepicker.css')}}">
   <!-- bootstrap datepicker -->
