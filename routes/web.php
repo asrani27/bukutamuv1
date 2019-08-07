@@ -48,3 +48,7 @@ Route::post('/pdf/report/print', 'PdfController@printpdf')->name('printpdf');
 
 Route::get('/pdf', 'PdfController@index');
 Route::get('/pdf/test', 'PdfController@test')->name('test');
+
+
+Route::get('/excel', 'ExcelController@index')->name('excel');
+Route::get('/excel/export', 'ExcelController@exportFile')->name('allexcel');

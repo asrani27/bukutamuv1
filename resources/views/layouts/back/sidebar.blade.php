@@ -10,6 +10,7 @@
     <ul class="sidebar-menu" data-widget="tree">
       <li class="header">MENU UTAMA</li>
       <li><a href="{{route('home')}}"><i class="fa fa-dashboard"></i> Dashboard</a></li>
+      <li><a href="{{route('excel')}}"><i class="fa fa-dashboard"></i> Excel</a></li>
       <li><a href="{{route('user')}}"><i class="fa fa-users"></i> Account</a></li>
     <li><a href="{{route('logout')}}"><i class="fa fa-close"></i> Logout</a></li>
     </ul>

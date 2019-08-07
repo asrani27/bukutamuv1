@@ -4,6 +4,7 @@
 <table class="table1" >
         <tr>
                 <th>No</th>
+                <th>Foto</th>
                 <th>Nama</th>
                 <th>Jumlah</th>
                 <th>Tanggal</th>
@@ -18,6 +19,9 @@
                       @foreach ($data as $dt)
                         <tr>
                         <td>{{$no++}}</td>
+                        <td>
+                        <img src={{url("/storage/{$dt->namafoto}")}} width='50px'>
+                        </td>
                         <td>{{$dt->nama_tamu}}</td>
                         <td>{{$dt->jumlah_tamu}}</td>
                         <td>{{Carbon\Carbon::parse($dt->tanggal)->format('d-M-Y')}}</td>
