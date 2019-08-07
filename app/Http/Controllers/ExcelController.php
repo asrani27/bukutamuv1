@@ -22,7 +22,7 @@ class ExcelController extends Controller
 
     public function exportFile(){
         $export = new AgendaExport;
-        return Excel::download($export, 'agenda.xlsx');
+        return Excel::download($export, 'report.xlsx');
         //return Excel::download(new UsersExport, 'users.xlsx');
     }  
 }
