@@ -52,3 +52,4 @@ Route::get('/pdf/test', 'PdfController@test')->name('test');
 
 Route::get('/excel', 'ExcelController@index')->name('excel');
 Route::get('/excel/export', 'ExcelController@exportFile')->name('allexcel');
+Route::post('/excel/export/bulan', 'ExcelController@exportFileBulan')->name('excelbulan');

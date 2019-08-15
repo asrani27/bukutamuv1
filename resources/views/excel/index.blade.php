@@ -17,36 +17,27 @@
 @endpush
 @section('content')
       <div class="box box-primary">
-            {{-- <div class="box-body">
-                <form method="POST" action="{{route('printpdf')}}">
-                {{ csrf_field() }}
-                <div class="form-group">
-                    <label>Mulai Tanggal :</label>
-                    <div class="input-group">
-                        <div class="input-group-addon">
-                            <i class="fa fa-calendar"></i>
-                        </div>
-                        <input type="text" class="form-control"  id="datepicker1" value={{ Carbon\Carbon::today()->format('m/d/Y') }} name="tgl_mulai" required />
-                    </div><!-- /.input group -->
-                </div><!-- /.form group -->
-                <div class="form-group">
-                    <label>Sampai Tanggal :</label>
-                    <div class="input-group">
-                        <div class="input-group-addon">
-                            <i class="fa fa-calendar"></i>
-                        </div>
-                        <input type="text" class="form-control" id="datepicker2" value={{ Carbon\Carbon::today()->format('m/d/Y') }} name="tgl_akhir" required />
-                    </div><!-- /.input group -->
-                </div><!-- /.form group -->
-                <button type="submit" class="btn btn-sm btn-primary">Print PDF</button>
-                <a href={{url('/home')}} class="btn btn-sm btn-danger">Kembali</a>
-                </form>
-            </div> --}}
             <div class="box-body">
                 <a href="{{route('allexcel')}}" class="btn btn-sm btn-primary">Semua Data</a>
                 <a href={{url('/home')}} class="btn btn-sm btn-danger">Kembali</a>
             </div>
   </div>
+  <div class="box box-primary">
+    <div class="box-body">
+        <form method="POST" action="{{route('excelbulan')}}">
+        {{ csrf_field() }}
+        <div class="form-group">
+          <label>Pilih Bulan</label>
+          <select class="form-control" name='bulantahun'>
+            @foreach($result as $r)
+              <option value="{{$r->month}}/{{$r->year}}">{{$r->month}} {{$r->year}}</option>
+            @endforeach
+          </select>
+        </div>
+        <button type="submit" class="btn btn-sm btn-primary">Export To Excel</button>
+        </form>
+    </div>
+</div>
 @endsection
 
 

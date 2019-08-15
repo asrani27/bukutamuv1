@@ -11,15 +11,6 @@ use Maatwebsite\Excel\Concerns\Exportable;
 
 class AgendaExport implements FromView
 {
-    // use Exportable;
-
-    // public function query()
-    // {
-    //     return Agenda::selectRaw('year(created_at) year, monthname(created_at) month, count(*) data')
-    //     ->groupBy('year', 'month')
-    //     ->orderBy('year', 'desc')
-    //     ->get();
-    // }
 
     public function view(): View
     {
