@@ -18,7 +18,7 @@
 @section('content')
       <div class="box box-primary">
             <div class="box-body">
-                <a href="{{route('allexcel')}}" class="btn btn-sm btn-primary">Semua Data</a>
+                <a href="{{route('allexcel')}}" class="btn btn-sm btn-primary">Export Semua Data</a>
                 <a href={{url('/home')}} class="btn btn-sm btn-danger">Kembali</a>
             </div>
   </div>
