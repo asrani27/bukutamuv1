@@ -88,7 +88,7 @@
     <div class="container">
       <!-- Content Header (Page header) -->
       <section class="content-header">
-            <h2 class="text-center">Selamat Datang di <b class="text-primary">Buku Tamu Pemko Banjarmasin</b></h2>
+            <h2 class="text-center">Selamat Datang di <b class="text-primary">Buku Tamu Pameran SmartCity Kota Banjarmasin</b></h2>
             <h3 class="text-center">Silahkan Isikan Agenda Dibawah Ini</h3>
        
       </section>

@@ -19,7 +19,7 @@
 @section('content')
 <div class="row">
         <div class="box box-primary">
-                <form class="form-horizontal" action="{{ route('sb') }}" method="POST" id="myform">
+                <form class="form-horizontal" action="{{url('simpan')}}" method="POST" id="myform">
                     {{ csrf_field() }}
                   <div class="box-body">
                     <br />
